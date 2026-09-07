@@ -16,6 +16,35 @@
 !!                                   Sebastian Pipping -- Berlin, 2026-08-03 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+Release 2.8.5 XXX XXXXXXXXXX XX XXXX
+        Security fixes:
+           #XXXX  XXXXXXXXXXXXXX
+
+        Bug fixes:
+           #1346  lib: Fix OOM-related memory leak on a failed overflow check
+
+        Other changes:
+           #1354  lib: Reject an XML declaration version other than `1.[0-9]+`
+           #1357  lib: Drop internal macros FASTCALL, PTRCALL, PTRFASTCALL
+     #1352 #1353  CMake|Windows: Refrain from adding `/source-charset:utf-8`
+                    for MSVC
+           #1173  Autotools|macOS: Sync CMake templates with CMake 4.4.3
+           #1349  Replace some internal use of XML_Bool with standard bool
+           #1360  tests|xmlwf: Add `#include "expat_config.h"` where missing
+           #1355  tests: Start covering hash table operation
+           #1350  tests: Drop __cplusplus leftovers
+
+        Infrastructure:
+           #1347  Add missing .gitignore entries
+           #1360  CI: Detect missing `#include "expat_config.h"`
+
+        Special thanks to:
+            Afonso Januário
+            Stan Ulbrych
+            Matthew Fernandez
+                 and
+            City of Munich Open Source Sabbatical
+
 Release 2.8.4 Mon August 31 2026
         Security fixes:
      #1321 #1331  CVE-2026-66046, CVE-2026-76641 -- Fix quadratic runtime from

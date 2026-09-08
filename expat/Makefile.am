@@ -40,6 +40,10 @@ AUTOMAKE_OPTIONS = \
     foreign \
     subdir-objects
 
+if WITH_DIST_BZIP3
+AUTOMAKE_OPTIONS += dist-bzip3
+endif
+
 ACLOCAL_AMFLAGS = -I m4
 LIBTOOLFLAGS = --verbose
 

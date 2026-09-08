@@ -77,6 +77,14 @@ AC_CANONICAL_HOST
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE([enable])  # to allow argument --disable-maintainer-mode
 
+dnl NOTE: Macro AM_OPTIONAL_AUTOMAKE is available with Automake >=1.19
+dnl       and serves as our proxy for robust Automake >=1.19 detection.
+dnl       We accept that `dist-bzip3` is already available since Automake >=1.18.
+dist_bzip3_supported=false
+m4_ifdef([AM_OPTIONAL_AUTOMAKE], [
+  dist_bzip3_supported=true
+])
+AM_CONDITIONAL([WITH_DIST_BZIP3], [test "${dist_bzip3_supported}" = true])
 
 dnl
 dnl Increment LIBREVISION if source code has changed at all
